@@ -52,6 +52,12 @@ const webpackConfig = {
           requiredVersion: deps["react-dom"],
           eager: true,
         },
+        "@chakra-ui/react": {
+          singleton: true,
+          shareKey: "chakra",
+          shareScope: "modern",
+          requiredVersion: deps["@chakra-ui/react"],
+        },
       },
     }),
     new HtmlWebpackPlugin({

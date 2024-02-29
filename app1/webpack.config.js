@@ -46,12 +46,12 @@ const webpackConfig = {
       },
       shared: {
         // ...deps,
-        // react: { singleton: true, requiredVersion: deps.react, eager: true },
-        // "react-dom": {
-        //   singleton: true,
-        //   requiredVersion: deps["react-dom"],
-        //   eager: true,
-        // },
+        react: { singleton: true, requiredVersion: deps.react, eager: true },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+          eager: true,
+        },
       },
     }),
     new HtmlWebpackPlugin({

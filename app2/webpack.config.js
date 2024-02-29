@@ -43,15 +43,16 @@ const webpackConfig = {
       library: { type: "var", name: "app2" },
       filename: "remoteEntry.js",
       exposes: {
+        "./App": "./src/components/App",
         "./Button": "./src/components/Button",
-        "./appInjector": "./src/components/injector",
       },
-      shared: [
-        // "react",
-        // "react-dom",
-        // {
-        // },
-      ],
+      shared: {
+        react: { singleton: true, requiredVersion: deps.react },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

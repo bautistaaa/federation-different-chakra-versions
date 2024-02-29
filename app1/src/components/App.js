@@ -1,17 +1,19 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
 
-import FederatedButton from "app2/Button";
+import FederatedApp from "app2/App";
 
 function App() {
   return (
-    <div>
-      <div>I am Host App</div>
+    <div
+      style={{ border: "1px blue solid", padding: "10px", margin: "20px 0" }}
+    >
+      <div>Host App with Chakra v2</div>
       <Button>v2 button</Button>
       <div
         style={{ border: "1px red solid", padding: "10px", margin: "20px 0" }}
       >
-        <FederatedButton />
+        <FederatedApp />
       </div>
     </div>
   );

@@ -45,7 +45,6 @@ const webpackConfig = {
         app2: "app2",
       },
       shared: {
-        // ...deps,
         react: { singleton: true, requiredVersion: deps.react, eager: true },
         "react-dom": {
           singleton: true,
@@ -55,7 +54,6 @@ const webpackConfig = {
         "@chakra-ui/react": {
           singleton: false,
           version: deps["@chakra-ui/react"],
-          // requiredVersion: deps["@chakra-ui/react"],
           strictVersion: false,
         },
       },
